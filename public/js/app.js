@@ -1,5 +1,6 @@
 //Client side JS
 //Runs in the browser
+//This is the front end of our app. Thus we cannot use node modules.
 
 const weatherForm = document.querySelector("form");
 
