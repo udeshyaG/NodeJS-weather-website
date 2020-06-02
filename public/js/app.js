@@ -32,8 +32,8 @@ weatherForm.addEventListener("submit", (e) => {
         locationP.innerText = `Location = ${data.location}`;
         tempP.innerText = `Temp = ${data.temp} C`;
         descP.innerText = `Description = ${data.description}`;
-        pressureP.innerText = `Pressure = ${data.pressure}`;
-        humidityP.innerText = `Humidity = ${data.humidity}`;
+        pressureP.innerText = `Pressure = ${data.pressure} mb`;
+        humidityP.innerText = `Humidity = ${data.humidity}%`;
         errorP.innerText = "";
       }
     });

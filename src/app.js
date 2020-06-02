@@ -1,3 +1,6 @@
+//This is the back end of our app
+// The back end uses node JS
+
 const path = require("path");
 const express = require("express"); //this gives us a function
 const hbs = require("hbs");
