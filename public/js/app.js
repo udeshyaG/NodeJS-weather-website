@@ -9,6 +9,8 @@ const errorP = document.getElementById("error");
 const locationP = document.getElementById("location");
 const tempP = document.getElementById("temp");
 const descP = document.getElementById("description");
+const pressureP = document.getElementById("pressure");
+const humidityP = document.getElementById("humidity");
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -18,6 +20,8 @@ weatherForm.addEventListener("submit", (e) => {
   locationP.innerText = "";
   tempP.innerText = "";
   descP.innerText = "";
+  pressureP.innerText = "";
+  humidityP.innerText = "";
 
   fetch(`/weather?address=${addressInput}`)
     .then((res) => res.json())
@@ -25,9 +29,12 @@ weatherForm.addEventListener("submit", (e) => {
       if (data.error) {
         errorP.innerText = data.error;
       } else {
+        console.log(data);
         locationP.innerText = `Location = ${data.location}`;
         tempP.innerText = `Temp = ${data.temp} C`;
         descP.innerText = `Description = ${data.description}`;
+        pressureP.innerText = `Pressure = ${data.pressure}`;
+        humidityP.innerText = `Humidity = ${data.humidity}`;
         errorP.innerText = "";
       }
     });

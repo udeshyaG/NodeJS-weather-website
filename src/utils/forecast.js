@@ -15,6 +15,8 @@ function forecast(lat, long, callback) {
         temp: data.current.temperature,
         description: data.current.weather_descriptions[0],
         location: `${data.location.name} , ${data.location.region}`,
+        pressure: data.current.pressure,
+        humidity: data.current.humidity,
       });
     }
   });
