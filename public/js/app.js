@@ -29,7 +29,6 @@ weatherForm.addEventListener("submit", (e) => {
       if (data.error) {
         errorP.innerText = data.error;
       } else {
-        console.log(data);
         locationP.innerText = `Location = ${data.location}`;
         tempP.innerText = `Temp = ${data.temp} C`;
         descP.innerText = `Description = ${data.description}`;
